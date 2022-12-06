@@ -2,7 +2,10 @@
 *::before,
 *::after {
     box-sizing: border-box;
+    user-select: none;
 }
+
+
 
 *:hover {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -25,7 +28,7 @@ body {
     width: fit-content;
     display: grid;
     grid-template-columns: repeat(4, minmax(80px, 100px));
-    grid-template-rows: minmax(140px, auto) repeat(5, minmax(100px, 120px));
+    grid-template-rows: minmax(140px, auto) repeat(5, 100px);
     /* border-top-left-radius: 1em; */
     /* border-top-right-radius: 1em; */
     /* border-radius: 1em; */
@@ -86,4 +89,26 @@ body {
 
 .span-two-columns {
     grid-column: span 2;
+}
+
+.landscape-orientation-container-warning {
+    display: none;
+}
+
+@media (orientation: landscape) and (max-height: 640px) {
+    .landscape-orientation-container-warning {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        inset: 0;
+        background-color: #97c7dd;
+        background-image: linear-gradient(-90deg, #83dcda 0%, #97c7dd 100%);
+    }
+
+    .landscape-orientation-warning-message {
+        font-size: 2rem;
+        font-weight: bold;
+        color: rgba(0, 0, 0, 0.7);
+    }
 }

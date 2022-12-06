@@ -7,13 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
     <title>Calculator</title>
+    <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
+    <script src="./js/script.js" type="module"></script>
 </head>
 
 <body>
+    <div class="landscape-orientation-container-warning">
+        <span class="landscape-orientation-warning-message">Please rotate your phone to use calculator</span>
+    </div>
     <div class="calculator">
         <div class="output-screen">
-            <div class="previous-operand"></div>
-            <div class="current-operand"></div>
+            <div class="previous-operand" data-previous-operand></div>
+            <div class="current-operand" data-current-operand></div>
         </div>
         <button data-clear-all class="span-two-columns">AC</button>
         <button data-del>DEL</button>
